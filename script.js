@@ -163,7 +163,8 @@ const svg = `<div class="velas">
 
 present.addEventListener('click', () => {
     present.classList.add('fade-out');
-
+    document.getElementById('birthdayAudio').play();
+    document.getElementById('birthdayAudio').volume = '0.7';
     setTimeout(() => {
         present.remove();
         cake.innerHTML = svg;
@@ -192,4 +193,6 @@ open.addEventListener('click', () => {
     cake.style.opacity = '0';
     open.style.opacity = '0';
 })
+
+
 
